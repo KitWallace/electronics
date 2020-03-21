@@ -124,9 +124,7 @@ return
 <html>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link href="http://kitwallace.co.uk/rt/images/rticon128.png" rel="icon" sizes="128x128" />
-            <link rel="shortcut icon" type="image/png" href="http://kitwallace.co.uk/rt/images/rticon.png"/>
-            <script type="text/javascript" src="../../trees/javascript/sorttable.js"></script> 
+            <script type="text/javascript" src="sorttable.js"></script> 
 
     </head>
     <body>
