@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <device>
+        <type>sensor</type>
+        <code>MPR121</code>
+        <title>12 channel Capacitive Touch Sensor</title>
+        <manufacturer>NXP Semiconductors</manufacturer>
+        <datasheet>https://www.nxp.com/docs/en/data-sheet/MPR121.pdf</datasheet>
+        <measures>Touch</measures>
+        <measures>Temperature</measures>
+        <principle>change in capacitance due to proximity of body with a </principle>
+        <voltage>3.3</voltage>
+        <interface>I2C</interface>
+        <tutorial title="adafruit"
+            >https://cdn-learn.adafruit.com/downloads/pdf/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial.pdf</tutorial>
+        <pinout>
+            <order>right to left </order>
+            <pin label="VIN">power in </pin>
+            <pin label="3v0">3.3v supply from onboard regulator</pin>
+            <pin label="GND"/>
+            <pin label="ADDR">change addresss -default 0x5A</pin>
+            <pin label="SDA">IC2</pin>
+            <pin label="SCL">I2C</pin>
+            <pin label="IRG"/>
+        </pinout>
+        <library title="adafruit">https://github.com/adafruit/Adafruit_MPR121</library>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>BME280</code>
+        <title>Barometric pressure and humidity Sensor</title>
+        <manufacturer>Bosch</manufacturer>
+        <datasheet>https://cdn-shop.adafruit.com/datasheets/BST-BME280_DS001-10.pdf</datasheet>
+        <measures>Barometric Pressure</measures>
+        <measures>Humidity</measures>
+        <measures>Temperature</measures>
+        <principle>piezoresistive - resistance increases with increased pressure</principle>
+        <voltage>3.3</voltage>
+        <interface>I2C</interface>
+        <tutorial source="adafruit"
+            >https://learn.sparkfun.com/tutorials/sparkfun-bme280-breakout-hookup-guide</tutorial>
+        <tutorial source="KitWallace"
+            >http://kitwallace.tumblr.com/post/180634087629/barometer-with-oled-display</tutorial>
+        <pinout>
+            <order>left to right with pins at top pointing down</order>
+            <pin label="VIN">power in </pin>
+            <pin label="3v0">3.3v puy from onboard regulator</pin>
+            <pin label="GND"/>
+            <pin label="SCK">also the I2C SCL</pin>
+            <pin label="SDO">take to GND to change I2C address from 0x77 to 0x76</pin>
+            <pin label="SDI">also the I2C SDA</pin>
+            <pin label="CS"/>
+        </pinout>
+        <library source="adafruit">https://github.com/adafruit/Adafruit_BME280_Library</library>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>BMP280</code>
+        <title>Barometric pressure and humidity Sensor</title>
+        <manufacturer>Bosch</manufacturer>
+        <product>http://www.ebay.co.uk/itm/400976045423</product>
+        <price>4.02</price>
+        <datasheet>https://cdn-shop.adafruit.com/datasheets/BST-BME280_DS001-10.pdf</datasheet>
+        <measures>Barometric Pressure</measures>
+        <measures>Humidity</measures>
+        <principle>piezoresistive - resistance increases with increased pressure</principle>
+        <voltage>3.3</voltage>
+        <interface>I2C</interface>
+        <tutorial source="adafruit"
+            >https://learn.sparkfun.com/tutorials/sparkfun-bme280-breakout-hookup-guide</tutorial>
+        <tutorial source="instructables"
+            >http://www.instructables.com/id/WiFi-Internet-Controlled-Relays-using-ESP8266-Quic/</tutorial>
+        <pinout>
+            <order>left to right with pins at top pointing down</order>
+            <pin label="VIN"/>
+            <pin label="GND"/>
+            <pin label="SLC">I2C clock - pin D5 by default</pin>
+            <pin label="SDA">I2C data - pin D4 by default</pin>
+        </pinout>
+        <library>https://github.com/adafruit/Adafruit_BME280_Library</library>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>BMP085</code>
+        <title>Barometric pressure Sensor</title>
+        <manufacturer>Bosch</manufacturer>
+        <datasheet>https://www.sparkfun.com/datasheets/Components/General/BST-BMP085-DS000-05.pdf</datasheet>
+        <measures>Barometric Pressure</measures>
+        <principle>piezoresistive - resistance increases with increased pressure</principle>
+        <breakout>Sparkfun?</breakout>
+        <voltage>3.3</voltage>
+        <interface>I2C</interface>
+        <tutorial source="adafruit">https://learn.adafruit.com/bmp085/using-the-bmp085</tutorial>
+        <pinout>
+            <order>left to right with pins at top pointing down</order>
+            <pin label="VCC"/>
+            <pin label="GND"/>
+            <pin label="EOC"/>
+            <pin label="XCLR"/>
+            <pin label="SLC">I2C clock - pin D5 by default</pin>
+            <pin label="SDA">I2C data - pin D4 by default</pin>
+        </pinout>
+        <library>https://github.com/adafruit/Adafruit-BMP085-Library</library>
+        <arduinoCode source="Kit Wallace"
+            >https://github.com/KitWallace/CitizenSense/blob/master/ESP8266-code/ESP_BMP085_upload.ino</arduinoCode>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>MQ2</code>
+        <title>Sensor for Propane gas etc</title>
+        <manufacturer>Hanwei</manufacturer>
+        <measures>Propane etc</measures>
+        <datasheet>https://www.pololu.com/file/0J309/MQ2.pdf</datasheet>
+        <datasheet>http://www.seeedstudio.com/wiki/images/3/3f/MQ-2.pdf</datasheet>
+        <principle>varying resistance of Sn0<sup>2</sup> layer</principle>
+        <voltage>5</voltage>
+        <interface>analog</interface>
+        <pinout>
+            <order>left to right pins down looking at trimpot</order>
+            <pin label="VCC"/>
+            <pin label="AOUT"/>
+            <pin label="DOUT">is a digital trigger whose trigger point is set by the trimpot</pin>
+            <pin label="GND"/>
+        </pinout>
+        <tutorial source="Kit Wallace"
+            >http://kitwallace.tumblr.com/post/142126924774/experiments-with-gas-sensors</tutorial>
+        <arduinoCode source="Kit Wallace"
+            >https://github.com/KitWallace/CitizenSense/blob/master/ESP8266-code/GasSensor.ino</arduinoCode>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>MQ3</code>
+        <title>Sensor for alcohol</title>
+        <manufacturer>Hanwei</manufacturer>
+        <measures>Alcohol</measures>
+        <datasheet>https://www.seeedstudio.com/depot/datasheet/MQ-2.pdf</datasheet>
+        <principle>varying resistance of Sn0<sup>2</sup> layer</principle>
+        <voltage>5</voltage>
+        <interface>analog</interface>
+        <pinout>
+            <order>left to right pins ownlooking at trimpot</order>
+            <pin label="VCC"/>
+            <pin label="AOUT"/>
+            <pin label="DOUT">is a digital trigger whose trigger level is set by the trimpot</pin>
+            <pin label="GND"/>
+        </pinout>
+        <tutorial source="Kit Wallace"
+            >http://kitwallace.tumblr.com/post/142126924774/experiments-with-gas-sensors</tutorial>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>TSL2561</code>
+        <manufacturer>TAOS</manufacturer>
+        <title>Sensor for luminosity</title>
+        <measures>Light intensity</measures>
+        <interface>I2C</interface>
+        <principle>current produced by two photodiodes measuring different parts of the
+            spectrum</principle>
+        <datasheet>https://www.adafruit.com/datasheets/TSL2561.pdf</datasheet>
+        <pinout>
+            <order>left to right with pins at top pointing down</order>
+            <pin label="VCC"/>
+            <pin label="GND"/>
+            <pin label="SLC">I2C clock - pin D5 by default</pin>
+            <pin label="SDA">I2C data - pin D4 by default</pin>
+            <pin label="INT"/>
+        </pinout>
+        <library>https://github.com/sparkfun/SparkFun_TSL2561_Arduino_Library</library>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>DHT22</code>
+        <manufacturer>Aosong</manufacturer>
+        <title>Sensor for relative humidity</title>
+        <measures>Relative Humidity</measures>
+        <interface>one wire</interface>
+        <principle>water vapour absorption changes capacitance</principle>
+        <datasheet>https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf</datasheet>
+        <tutorial source="sensormag"
+            >http://www.sensorsmag.com/sensors/humidity-moisture/choosing-a-humidity-sensor-a-review-three-technologies-840</tutorial>
+        <tutorial source="NPL"
+            >http://www.npl.co.uk/publications/comparison-of-instruments-for-measureing-relative-humidity.</tutorial>
+        <tutorial source="Adafruit">https://plot.ly/arduino/dht22-temperature-tutorial/</tutorial>
+        <tutorial source="RandomNerd"
+            >https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-and-humidity-web-server-with-arduino-ide//</tutorial>
+        <tutorial source="losant"
+            >https://www.losant.com/blog/getting-started-with-the-esp8266-and-dht22-sensor</tutorial>
+        <pinout>
+            <order>left to right with pins pointing down from front</order>
+            <pin label="VCC"/>
+            <pin label="DATA"/>
+            <pin label="NULL"/>
+            <pin label="GND"/>
+        </pinout>
+        <library>http://playground.arduino.cc/Main/DHTLib</library>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>HC-SR04</code>
+        <title>Ultrasonic short distance range-finder </title>
+        <manufacturer>Cytron Technologies</manufacturer>
+        <measures>distance</measures>
+        <principle>length of time for ultrasound (40Khz)echo. Transmitter/receiver use piezo
+            crystals (Lead zironate titanate or PZT) which expand and contract as voltage is
+            applied, and conversely generates voltage when the shape changes (see Micah's video) </principle>
+        <product>http://www.cytron.com.my/p-sn-hc-sr04</product>
+        <datasheet>https://docs.google.com/document/d/1Y-yZnNhMYy7rwhAgyL_pfa39RsB-x2qR4vP8saG73rE</datasheet>
+        <video source="scanlime">https://www.youtube.com/watch?v=VuzytIcSxwI</video>
+        <voltage>5</voltage>
+        <interface>PWM</interface>
+        <pinout>
+            <order>left to right with pins pointing down from front</order>
+            <pin label="VCC"/>
+            <pin label="trig"/>
+            <pin label="echo"/>
+            <pin label="GND"/>
+        </pinout>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>LM393</code>
+        <title>Sound detector</title>
+        <measures>presence/absence of sound</measures>
+        <principle>varying capacitance of Electret Microphone. the LM363 is actually a Fairchild
+            voltage comaprator used to distingush between sound and no sound </principle>
+        <voltage>3.3-5</voltage>
+        <interface>digital</interface>
+        <pinout>
+            <order>left to right with pins pointing down from mic side</order>
+            <pin label="G">GND</pin>
+            <pin label="V">3.3v</pin>
+            <pin label="S">Digital pin normally HIGH, goes LOW when sound detected. Trim pot
+                determines threshold.</pin>
+        </pinout>
+        <tutorial author="henry"
+            >http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-sound-detection-sensor-tutorial-and-user-manual/</tutorial>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>GP2Y10AU0F</code>
+        <title>Dust particle sensor</title>
+        <manufacturer>Sharp</manufacturer>
+        <measures>dust particles</measures>
+        <principle>reflected light measured with photo diode</principle>
+        <product>https://www.sparkfun.com/products/9689</product>
+        <datasheet>https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf</datasheet>
+        <interface>analog</interface>
+        <pinout>
+            <order>left to right</order>
+            <pin label="V-LED"> centre of RC divider to pulse the LED</pin>
+            <pin label="GND"/>
+            <pin label="LED">digital pin normally HIGH, LOW to turn on</pin>
+            <pin label="GND"/>
+            <pin label="OUT"> analogue output </pin>
+            <pin label="Vcc">3.3v</pin>
+        </pinout>
+        <tutorial source="Kit Wallace"
+            >http://kitwallace.tumblr.com/post/141890535929/dust-sensor</tutorial>
+        <arduinoCode source="Kit Wallace"
+            >https://github.com/KitWallace/CitizenSense/blob/master/ESP8266-code/SharpGP2Y10.ino</arduinoCode>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>DSM501A</code>
+        <title>Dust particle sensor</title>
+        <manufacturer>SamYoung</manufacturer>
+        <measures>dust particles</measures>
+        <principle>reflected light measured with photo diode</principle>
+        <datasheet>http://www.samyoungsnc.com/products/3-1%20Specification%20DSM501.pdf</datasheet>
+        <datasheet>http://www.elektronik.ropla.eu/pdf/stock/smy/dsm501.pdf</datasheet>
+        <interface>analog</interface>
+        <pinout>
+            <order>left to right in pin number order</order>
+            <pin label="Control">Vout 1 control</pin>
+            <pin label="Vout2">Vout 2 output PWM - density of particles over 1 micron</pin>
+            <pin label="Vcc">5v</pin>
+            <pin label="Vout1">Vout 1 output (PWM) - adjustable particle size up to 2.5
+                microns</pin>
+            <pin label="GND">Ground</pin>
+        </pinout>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>ADXL335</code>
+        <manufacturer>Analog Devices</manufacturer>
+        <title>3-axis accelerometer</title>
+        <measures>XYZ orientation</measures>
+        <principle>movement of sprung plate varies capacitance</principle>
+        <datasheet>https://www.sparkfun.com/datasheets/Components/SMD/adxl335.pdf</datasheet>
+        <breakout>https://www.adafruit.com/products/163</breakout>
+        <voltage>3.3</voltage>
+        <interface>analog</interface>
+        <usewith>ADS1115</usewith>
+        <pinout>
+            <pin label="GND"/>
+            <pin label="Z">Analog Z in Gs</pin>
+            <pin label="Y">Analog Y in Gs</pin>
+            <pin label="X">Analog X in Gs</pin>
+            <pin label="3V">3.3 volt</pin>
+            <pin label="TST"/>
+        </pinout>
+        <tutorial source="Kit Wallace"
+            >http://kitwallace.tumblr.com/post/141837861764/3-axis-accelerometer</tutorial>
+        <arduinoCode source="Kit Wallace"
+            >https://github.com/KitWallace/CitizenSense/blob/master/ESP8266-code/ADXL335Test.ino</arduinoCode>
+        <discussion>use with 4 channel ADC eg ADS1115</discussion>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>2Y0A21</code>
+        <manufacturer>Sharp</manufacturer>
+        <title>Infrared range-finder</title>
+        <measures>distance</measures>
+        <datasheet>http://www.sharpsma.com/webfm_send/1208</datasheet>
+        <principle>measures angle of reflected beam of infrared</principle>
+        <voltage>5V</voltage>
+        <interface>analog</interface>
+        <pinout>
+            <pin label="Signal">Analog voltage - needs conversion to distance</pin>
+            <pin label="GND"/>
+            <pin label="VCC">5V</pin>
+        </pinout>
+        <tutorial source="Kit Wallace"
+            >http://kitwallace.tumblr.com/post/141494462814/distance-measurement-by-ir-sensor</tutorial>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>FZ0967</code>
+        <title>load cell</title>
+        <manufacturer>Flux workshop</manufacturer>
+        <voltage>5-10</voltage>
+        <measures>weight up to 5kg </measures>
+        <interface>low voltage output from wheatstone bridge needs amplifier</interface>
+        <usewith>HX711</usewith>
+        <tutorial source="sparkfun"
+            >https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide</tutorial>
+        <pinout>
+            <pin label="red">Excitation</pin>
+            <pin label="yellow">Output +</pin>
+            <pin label="Black">Excitation</pin>
+            <pin label="Green">Output -</pin>
+        </pinout>
+        <description>output is</description>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>FSR402</code>
+        <title>Force sensitive Resistor</title>
+        <measures>pressure to 10kg</measures>
+        <principle>pressure changes resistance. No pressure resistance is 1Mohm, as pressure
+            increases up to 10kg resistance drops</principle>
+        <product>http://oomlout.co.uk/products/force-sensitive-resistor-interlink-fsr-402</product>
+        <interface>variable resistance - voltage divider + analog</interface>
+        <discussion>use in a voltage divider with eg a 10k resistor</discussion>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>HC-SR501</code>
+        <manufacturer>Cytron Technologies?</manufacturer>
+        <title>PIR - passive infrared movement detector</title>
+        <datasheet>https://www.mpja.com/download/31227sc.pdf</datasheet>
+        <measures>movement</measures>
+        <voltage>5</voltage>
+        <principle>changes in current generated by presence of infrared light </principle>
+        <interface>digital</interface>
+        <pinout>
+            <pin label="GND"/>
+            <pin label="Output"> Digital - HIGH when motion detected, LOW if not sensitivity and
+                delay adjustable with the trimpots</pin>
+            <pin label="VCC">5 volts</pin>
+        </pinout>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>SCT-013</code>
+        <title>AC current sensor</title>
+        <manufacturer>YHDC</manufacturer>
+        <measures>AC current</measures>
+        <principle>Proportional current induced in surrounding coil</principle>
+        <datasheet>https://openenergymonitor.org/emon/sites/default/files/SCT013-000_datasheet_0.pdf</datasheet>
+        <interface>variable current - use burden resistacne and bi-directional analog</interface>
+        <product>http://www.seeedstudio.com/depot/Noninvasive-AC-Current-Sensor-100A-max-p-547.html</product>
+        <tutorial source="review on openenergymonitor"
+            >http://www.seeedstudio.com/depot/Noninvasive-AC-Current-Sensor-100A-max-p-547.html</tutorial>
+        <tutorial source="Kit Wallace"
+            >http://kitwallace.tumblr.com/post/142114739209/energy-monitor</tutorial>
+        <tutorial source="seeedstudio"
+            >http://www.seeedstudio.com/recipe/377-esp8266-iot-energy-monitor.html </tutorial>
+        <arduinoCode source="KitWallace"
+            >https://github.com/KitWallace/CitizenSense/blob/master/ESP8266-code/EnergyMonitor.ino</arduinoCode>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>GL5528</code>
+        <title>Photoresistor</title>
+        <measures>light</measures>
+        <principle>a layer of CdS Cadmium sulfide becomes conductive when light falls on
+            it</principle>
+        <product>http://www.ebay.co.uk/itm/171926467646</product>
+        <tutorial source="reuk">http://www.reuk.co.uk/Light-Dependent-Resistor.htm</tutorial>
+        <interface>variable resistance - voltage divider + analog</interface>
+    </device>
+    <device>
+        <type>ADC</type>
+        <code>HX711</code>
+        <title>Signal amplifier and 24 bit Analog to Digital converter for load cells</title>
+        <tutorial source="sparkfun"
+            >http://arduinotronics.blogspot.co.uk/2015/06/arduino-hx711-digital-scale.html</tutorial>
+        <library source="bogde">https://github.com/bogde/HX711</library>
+    </device>
+    <device>
+        <type>ADC</type>
+        <code>ADS1115</code>
+        <title>4 channel 16 bit Analog to Digital converter</title>
+        <product>https://learn.adafruit.com/adafruit-4-channel-adc-breakouts</product>
+        <library source="adafruit">https://github.com/adafruit/Adafruit_ADS1X15</library>
+    </device>
+    <device>
+        <type>transmitter</type>
+        <code>FS1000A</code>
+        <title>433Mz transmitter to interface with a wireless power socket</title>
+        <product source="ebay"
+            >http://www.ebay.co.uk/itm/433mhz-RF-Transmitter-and-Receiver-Modules-Pair-Wireless-for-Arduino/111766237121</product>
+        <tutorial source="kitwallace"
+            >http://kitwallace.tumblr.com/post/141361342184/esp8266-power-socket-controller</tutorial>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>HMC5883L</code>
+        <manufacturer>Honeywell</manufacturer>
+        <title>3-axis magnetometer for use as compass</title>
+        <measures>magnetic field</measures>
+        <principle>AMR (Anisotropic Magnetoresistive) </principle>
+        <interface>I2C</interface>
+        <product source="ebay">http://www.ebay.co.uk/itm/172001731990</product>
+        <datasheet>http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/HMC5883L_3-Axis_Digital_Compass_IC.pdf</datasheet>
+        <tutorial source="adafruit"
+            >https://learn.adafruit.com/adafruit-hmc5883l-breakout-triple-axis-magnetometer-compass-sensor/wiring-and-test</tutorial>
+        <tutorial source="FabioNelli"
+            >http://www.meccanismocomplesso.org/en/arduino-magnetic-magnetic-magnetometer-hmc5883l/</tutorial>
+        <library source="adafruit -unified sensors"
+            >https://github.com/adafruit/Adafruit_Sensor</library>
+        <library source="adafruit -HMC5885"
+            >https://github.com/adafruit/Adafruit_HMC5883_Unified</library>
+    </device>
+    <device>
+        <type>MCU</type>
+        <code>Wemos D1 Mini</code>
+        <title>ESP8266 microprocessor board</title>
+        <includes>ESP8266</includes>
+        <datasheet>http://www.wemos.cc/product/d1_mini.html</datasheet>
+        <voltage>3.3</voltage>
+        <clockspeed>80Mhz</clockspeed>
+        <interface>microUSB</interface>
+        <memory>4Mb flash</memory>
+        <pinout>
+            <order>all IO pins are 0 - 3.3 V and support interrupt/PWM/I2C/One-Wire except D0.
+                GPIOnn are Arduino pin numbers, </order>
+            <pin label="TX">TXD</pin>
+            <pin label="RX">RXD</pin>
+            <pin label="D1">IO, SCL GPIO5</pin>
+            <pin label="D2">IO, SDA GPIO4</pin>
+            <pin label="D3">IO, 10k Pull-up GPIO0 - High Run,Low Flash - beware of holding low at
+                bootup</pin>
+            <pin label="D4">IO, 10k Pull-up, Built-in LED GPIO2</pin>
+            <pin label="G">Ground</pin>
+            <pin label="5V">5V</pin>
+            <pin label="RST">Reset</pin>
+            <pin label="A0">Analog input, max 3.3V input</pin>
+            <pin label="D0">IO GPIO16</pin>
+            <pin label="D5">IO, SCK GPIO14</pin>
+            <pin label="D6">IO, MISO GPIO12</pin>
+            <pin label="D7">IO, MOSI GPIO13</pin>
+            <pin label="D8">IO, 10k pull-down, MOSI GPIO13</pin>
+            <pin label="3V3">3.3V</pin>
+        </pinout>
+        <tutorial source="KitWallace">http://kitwallace.tumblr.com/tagged/esp8266</tutorial>
+    </device>
+    <device>
+        <type>RTC</type>
+        <code>DS1307</code>
+        <title>Tiny RTC Battery-powered Real Time Clock</title>
+        <discussion>lots of problems reported</discussion>
+        <interface>I2C</interface>
+        <voltage>3.3 to 5v</voltage>
+        <product source="ebay">http://www.ebay.co.uk/itm/400871752739</product>
+        <tutorial source="elecrow">http://www.elecrow.com/wiki/index.php?title=Tiny_RTC</tutorial>
+        <pinout>
+            <pin label="SQ">Square wave output</pin>
+            <pin label="DS">DS18B20 Temp. Sensor output - one wire interface</pin>
+            <pin label="SCL">I2C clock</pin>
+            <pin label="SDA">I2C data</pin>
+            <pin label="VCC">supply to power module and trickle charge the battery</pin>
+            <pin label="GND">Ground</pin>
+            <pin label="BAT">To monitor the battery voltage</pin>
+        </pinout>
+    </device>
+    <device>
+        <type>RTC</type>
+        <code>DS3231</code>
+        <manufacturer>Maxim Integrated</manufacturer>
+        <datasheet>https://www.maximintegrated.com/en/products/digital/real-time-clocks/DS3232.html</datasheet>
+        <title>Battery-powered Real Time Clock </title>
+        <interface>I2C</interface>
+        <voltage>3.3 to 5v</voltage>
+        <product source="ebay">http://www.ebay.co.uk/itm/400902900013</product>
+        <pinout>
+            <pin label="32K">32kHz output</pin>
+            <pin label="SQW">Square wave output</pin>
+            <pin label="SCL">I2C clock</pin>
+            <pin label="SDA">I2C data</pin>
+            <pin label="VCC">supply to power module and trickle charge the battery</pin>
+            <pin label="GND">Ground</pin>
+        </pinout>
+        <library title="JChristensen">https://github.com/JChristensen/DS3232RTC</library>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>INA219B </code>
+        <title>DC Current sensor</title>
+        <product source="adafruit"
+            >https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/overview</product>
+        <library source="adafruit">https://github.com/adafruit/Adafruit_INA219</library>
+        <tutorial source="home automation"
+            >https://www.openhomeautomation.net/power-monitoring-arduino-ina219/</tutorial>
+        <tutorial source="henrysbench"
+            >http://henrysbench.capnfatz.com/henrys-bench/arduino-current-measurements/ina219-arduino-current-sensor-voltmeter-tutorial-quick-start/</tutorial>
+        <tutorial source="embeddedcomputing"
+            >http://embeddedcomputing.weebly.com/isup2c-voltage-current-power-ina219-sensor.html</tutorial>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>HTU21D</code>
+        <title>Humidity Sensor</title>
+        <manufacturer>MEAS</manufacturer>
+        <measures>humidity and temperature</measures>
+        <datasheet>https://www.adafruit.com/datasheets/1899_HTU21D.pdf</datasheet>
+        <interface>I2C</interface>
+        <library source="adafruit">https://github.com/adafruit/Adafruit_HTU21DF_Library</library>
+        <pinout>
+            <pin label="3.3V">supply </pin>
+            <pin label="GND">Ground</pin>
+            <pin label="SDA">I2C data</pin>
+            <pin label="SCL">I2C clock</pin>
+        </pinout>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>ACS712</code>
+        <manufacturer>Allegro</manufacturer>
+        <title>Hall effect Current sensor</title>
+        <measures>current flow</measures>
+        <principle>Hall effect</principle>
+        <interface>analogue</interface>
+        <datasheet>http://henrysbench.capnfatz.com/wp-content/uploads/2014/11/acs712-datasheet.pdf</datasheet>
+        <pinout>
+            <pin label="VCC"/>
+            <pin label="OUT"/>
+            <pin label="GND"/>
+        </pinout>
+        <tutorial source="henrysbench"
+            >http://henrysbench.capnfatz.com/henrys-bench/arduino-current-measurements/acs712-current-sensor-user-manual/</tutorial>
+    </device>
+    <device>
+        <type>display</type>
+        <code>Serial LCD 1602</code>
+        <manufacturer>Hitachi</manufacturer>
+        <voltage>5</voltage>
+        <title>LCD display with 16 characters in 2 rows</title>
+        <product>http://www.ebay.co.uk/itm/152052665390</product>
+        <pinout>
+            <pin label="GND">ground</pin>
+            <pin label="VCC">5v supply</pin>
+            <pin label="SDA">I2C data</pin>
+            <pin label="SCL">I2C clock</pin>
+        </pinout>
+        <library>https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads</library>
+        <tutorial source="Wikipedia"
+            >https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller</tutorial>
+    </device>
+    <device>
+        <type>display</type>
+        <code>0.96" Serial 128*64 OLED display</code>
+        <title>128 x 64 poxel OLED display</title>
+        <voltage>3.5</voltage>
+        <interface>I2C</interface>
+        <description>8 characters are user definable.</description>
+        <product>http://www.ebay.co.uk/itm/172257546090</product>
+        <pinout>
+            <pin label="VCC">3.5v supply</pin>
+            <pin label="GND">ground</pin>
+            <pin label="SCL">I2C clock</pin>
+            <pin label="SDA">I2C data</pin>
+        </pinout>
+        <library source="adafruit">https://github.com/adafruit/Adafruit_SSD1306</library>
+        <tutorial source="KitWallace"
+            >http://kitwallace.tumblr.com/post/180634087629/barometer-with-oled-display</tutorial>
+    </device>
+    <device>
+        <type>display</type>
+        <code>MU45-QP5014</code>
+        <title>Moving coil meter</title>
+        <product>https://www.jaycar.co.uk/0-50ua-mu45-panel-meter-moving-coil-type/p/QP5012</product>
+        <datasheet>http://kitwallace.co.uk/rt/docs/shuntmul.pdf</datasheet>
+        <tutorial title="Modifying the panel meter">http://www.norre.dk/meter/mu45.html</tutorial>
+        <pinout>
+            <pin label="+ve"/>
+            <pin label="-ve"/>
+        </pinout>
+    </device>
+    <device>
+        <type>sensor</type>
+        <code>APDS-9960</code>
+        <manufacturer>Avago</manufacturer>
+        <title>RGB and gesture Sensor</title>
+        <measures>RGB light intensity</measures>
+        <measures>gesture</measures>
+        <product>http://www.ebay.com/itm/272387002421</product>
+        <voltage>3.3</voltage>
+        <interface>I2C</interface>
+        <interface>interrupt</interface>
+        <pinout>
+            <pin label="VIN">3.5v supply</pin>
+            <pin label="GND">ground</pin>
+            <pin label="SCL">I2C clock</pin>
+            <pin label="SDA">I2C data</pin>
+            <pin label="INT">Interrupt - goes low on interrupt event</pin>
+        </pinout>
+        <datasheet>https://cdn.sparkfun.com/assets/learn_tutorials/3/2/1/Avago-APDS-9960-datasheet.pdf</datasheet>
+        <library source="Sparkfun"
+            >https://github.com/sparkfun/APDS-9960_RGB_and_Gesture_Sensor</library>
+        <tutorial source="Sparkfun"
+            >https://learn.sparkfun.com/tutorials/apds-9960-rgb-and-gesture-sensor-hookup-guide</tutorial>
+    </device>
+    <device>
+        <type>relay</type>
+        <code>SRD-03VDC-SL-C</code>
+        <title>3.3V Relay Optocoupler Relay</title>
+        <manufacturer>Songle</manufacturer>
+        <voltage>3.3</voltage>
+        <product>http://www.ebay.co.uk/itm/231535394504</product>
+        <price/>
+        <datasheet source="Songle - relay">SRD-03VDC-SL-C-Songle.pdf</datasheet>
+        <pinout>
+            <pin label="VCC">3.3 V power</pin>
+            <pin label="IN">0-3.3V switching </pin>
+            <pin label="GND">ground</pin>
+            <pin label="NC">Normally Closed positive</pin>
+            <pin label="COM">ground</pin>
+            <pin label="NO">Normally Open positive</pin>
+        </pinout>
+        <discussion>Jumpers set whether the relay is normally open or normally closed</discussion>
+    </device>
+</devices>
